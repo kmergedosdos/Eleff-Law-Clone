@@ -38,3 +38,4 @@ Stack trace:
 #8 {main}
   thrown in C:\Users\kmerge\Local Sites\the-eleff-law-group\app\public\wp-includes\nav-menu.php on line 136
 [10-Oct-2023 22:06:04 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\kmerge\Local Sites\the-eleff-law-group\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[10-Oct-2023 23:51:56 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-includes\class-wp-customize-widgets.php on line 905
