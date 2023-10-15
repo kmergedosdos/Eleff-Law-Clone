@@ -2,9 +2,7 @@
 get_header();
 ?>
 
-<main>
-  HELLO WORLD
-</main>
+HELLO WORLD
 
 <?php
 get_footer();

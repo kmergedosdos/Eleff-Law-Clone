@@ -2,9 +2,7 @@
 get_header();
 ?>
 
-<main>
-  THIS IS THE BLOG PAGE
-</main>
+THIS IS THE BLOG PAGE
 
 <?php
 get_footer();
