@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main>
-  THIS IS THE BLOG PAGE
+  HELLO WORLD
 </main>
 
 <?php
