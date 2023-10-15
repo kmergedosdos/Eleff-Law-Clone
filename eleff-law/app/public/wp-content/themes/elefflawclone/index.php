@@ -45,6 +45,10 @@ $parentPageUrl = get_permalink($parentPageId);
   <?php
   }
   ?>
+
+  <div class="blog-posts__pagination">
+    <?php echo paginate_links(); ?>
+  </div>
 </div>
 
 <?php
