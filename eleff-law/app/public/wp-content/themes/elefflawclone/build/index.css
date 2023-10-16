@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  margin: 0;
+}
+
 .page-banner__bg-image {
   height: 500px;
   background-position: top;
