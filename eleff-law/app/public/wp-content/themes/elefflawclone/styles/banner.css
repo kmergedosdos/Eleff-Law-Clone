@@ -1,0 +1,35 @@
+.page-banner {
+  position: relative;
+  height: 500px;
+}
+
+.page-banner__bg-image {
+  height: 100%;
+  background-position: top;
+}
+
+.page-banner__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.page-banner__content__img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.page-banner__content__text {
+  font-size: 42px;
+  color: var(--color-primary);
+}
+
+.page-banner__content__text span {
+  color: var(--color-white);
+}

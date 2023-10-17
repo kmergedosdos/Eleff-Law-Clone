@@ -1,0 +1,101 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 150px;
+}
+
+header .website-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+}
+
+header .website-info__contact-deets {
+  text-align: right;
+  color: white;
+}
+
+header .website-info__contact-deets span {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+header .website-info__contact-deets span:hover {
+  color: var(--color-white);
+}
+
+header .menu-header-menu-container {
+  padding: 0 5%;
+}
+
+header .menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.2em;
+  color: var(--color-white);
+}
+
+header .menu .menu-item {
+  padding: 0.5em 0 0.75em 0;
+  transition: color 0.3s ease;
+}
+
+header .menu .menu-item:hover {
+  color: var(--color-primary);
+}
+
+header .menu .menu-item-has-children {
+  position: relative;
+  cursor: default;
+}
+
+header .menu .menu-item-has-children > a > i {
+  margin-left: 1em;
+  font-size: 0.55em;
+  position: relative;
+  bottom: 0.25em;
+}
+
+header .menu .current-menu-item,
+header .menu .current-menu-parent {
+  color: var(--color-primary);
+}
+
+header .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: -1em;
+  display: none;
+  width: 250px;
+  border-top: 3px solid var(--color-primary-dark);
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+  background-color: var(--bg-color-black);
+  color: var(--color-white);
+}
+
+header .menu-item-has-children:hover .sub-menu,
+header .sub-menu:hover {
+  display: initial;
+}
+
+header .sub-menu .menu-item {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header .sub-menu .menu-item:hover {
+  background-color: var(--bg-color-black-dark1);
+}
