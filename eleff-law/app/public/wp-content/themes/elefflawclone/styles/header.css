@@ -22,11 +22,18 @@ header .website-info__contact-deets {
 header .website-info__contact-deets span {
   font-size: 19px;
   font-weight: 700;
-  color: var(--color-primary);
-  transition: color 0.3s ease;
 }
 
-header .website-info__contact-deets span:hover {
+header .website-info__contact-deets span a {
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+header .website-info__contact-deets span a::after {
+  border: none;
+}
+
+header .website-info__contact-deets span a:hover {
   color: var(--color-white);
 }
 
