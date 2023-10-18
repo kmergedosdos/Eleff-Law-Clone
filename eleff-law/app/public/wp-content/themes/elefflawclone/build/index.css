@@ -1,5 +1,6 @@
-@import url("../styles/banner.css");
-@import url("../styles//breadcrumb.css");
+@import url("../components/page-banner.css");
+@import url("../components/sidebar.css");
+@import url("../styles/breadcrumb.css");
 @import url("../styles/front-page-banner.css");
 @import url("../styles/header.css");
 

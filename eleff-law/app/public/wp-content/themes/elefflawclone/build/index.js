@@ -1,6 +1,8 @@
-// add chevron down icon to parent nav menu items
+// add chevron down icon to parent nav menu items in header section
 const chevronDownElement = '<i class="fa-solid fa-chevron-down"></i>';
-const menuItems = document.querySelectorAll(".menu-item-has-children > a");
+const menuItems = document.querySelectorAll(
+  "#menu-header-menu .menu-item-has-children > a"
+);
 menuItems.forEach((item) => {
   item.innerHTML += chevronDownElement;
 });

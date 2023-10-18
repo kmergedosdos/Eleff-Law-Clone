@@ -14,6 +14,7 @@ function lawgroup_features()
 {
   add_theme_support('title-tag');
   register_nav_menu('header-menu-location', 'Header Menu Location');
+  register_nav_menu('sidebar-menu-location', 'Sidebar Menu Location');
 }
 
 add_action('after_setup_theme', 'lawgroup_features');
