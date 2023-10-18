@@ -54,6 +54,13 @@ header .menu .menu-item:hover {
   color: var(--color-primary);
 }
 
+header .menu .menu-item a {
+  color: inherit;
+}
+header .menu .menu-item a::after {
+  border: none;
+}
+
 header .menu .menu-item-has-children {
   position: relative;
   cursor: default;

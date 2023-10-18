@@ -26,12 +26,12 @@
 
 .front-page-banner__content__text {
   padding: 2em;
-  color: var(--color-primary);
 }
 
 .front-page-banner__content__text .heading {
   font-size: 48px;
   font-style: italic;
+  color: var(--color-primary);
 }
 
 .front-page-banner__content__text .heading span {
