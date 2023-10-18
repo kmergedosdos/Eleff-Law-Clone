@@ -1,4 +1,5 @@
 @import url('../styles/banner.css');
+@import url('../styles/front-page-banner.css');
 @import url('../styles/header.css');
 
 :root {
@@ -18,7 +19,39 @@ html {
   font-size: 16px;
 }
 
+body {
+  font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', Georgia, "Times New Roman", serif;
+  font-weight: 500;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.button {
+  padding: 1.5em 2.5em;
+  border: none;
+  border-radius: 2.5em;
+  background-color: var(--color-primary-darker);
+  color: var(--color-white);
+  font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: black;
 }

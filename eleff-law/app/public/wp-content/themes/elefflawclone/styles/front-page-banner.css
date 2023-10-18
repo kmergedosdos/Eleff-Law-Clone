@@ -1,0 +1,48 @@
+.front-page-banner {
+  position: relative;
+  height: 600px;
+}
+
+.front-page-banner__bg-image {
+  height: 100%;
+  background-position: top;
+}
+
+.front-page-banner__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-page-banner__content__img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.front-page-banner__content__text {
+  padding: 2em;
+  color: var(--color-primary);
+}
+
+.front-page-banner__content__text .heading {
+  font-size: 48px;
+  font-style: italic;
+}
+
+.front-page-banner__content__text .heading span {
+  color: var(--color-white);
+}
+
+.front-page-banner__content__text .paragraph {
+  border-left: 3px solid var(--color-primary);
+  margin: 1em 0;
+  padding: 0.1em 1em;
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 300;
+}
