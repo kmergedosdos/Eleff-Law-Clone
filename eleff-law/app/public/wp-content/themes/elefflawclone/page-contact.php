@@ -21,10 +21,12 @@ while (have_posts()) {
     </p>
   </div>
 
-  <div class="generic-content">
-    <h1>
-      CONTACT PAGE CONTENT GOES HERE
-    </h1>
+  <div class="page-content">
+    <div class="generic-content">
+      <h1>
+        CONTACT PAGE CONTENT GOES HERE
+      </h1>
+    </div>
   </div>
 
 <?php

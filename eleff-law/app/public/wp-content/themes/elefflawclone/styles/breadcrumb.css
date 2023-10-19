@@ -8,10 +8,25 @@
   line-height: initial;
 }
 
+.breadcrumb p span::after {
+  content: "\f054\f054"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  font-size: 0.5em;
+  display: inline-block;
+  padding: 0 0.3em;
+  position: relative;
+  bottom: 0.2em;
+}
+
+.breadcrumb p span:last-child::after {
+  display: none;
+}
+
 .breadcrumb p span a {
   margin-right: 0.3em;
   font-weight: 600;
   color: var(--color-primary-dark);
+  transition: var(--transition-fade);
 }
 
 .breadcrumb p span i {

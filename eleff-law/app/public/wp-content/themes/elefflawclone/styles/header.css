@@ -26,11 +26,8 @@ header .website-info__contact-deets span {
 
 header .website-info__contact-deets span a {
   color: var(--color-primary);
+  text-decoration-color: transparent;
   transition: all 0.3s ease;
-}
-
-header .website-info__contact-deets span a::after {
-  border: none;
 }
 
 header .website-info__contact-deets span a:hover {
@@ -62,10 +59,8 @@ header .menu .menu-item:hover {
 }
 
 header .menu .menu-item a {
+  text-decoration-color: transparent;
   color: inherit;
-}
-header .menu .menu-item a::after {
-  border: none;
 }
 
 header .menu .menu-item-has-children {
@@ -73,11 +68,14 @@ header .menu .menu-item-has-children {
   cursor: default;
 }
 
-header .menu .menu-item-has-children > a > i {
-  margin-left: 1em;
+header .menu .menu-item-has-children > a::after {
+  content: "\f078"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
   font-size: 0.55em;
+  display: inline-block;
+  padding-left: 1em;
   position: relative;
-  bottom: 0.25em;
+  bottom: 0.2em;
 }
 
 header .menu .current-menu-item,

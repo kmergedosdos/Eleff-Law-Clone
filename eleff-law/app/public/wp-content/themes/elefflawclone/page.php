@@ -21,10 +21,12 @@ while (have_posts()) {
     </p>
   </div>
 
-  <?php include('components/sidebar.php') ?>
+  <div class="page-content">
+    <?php include('components/sidebar.php') ?>
 
-  <div class="generic-content">
-    <?php the_content(); ?>
+    <div class="generic-content">
+      <?php the_content(); ?>
+    </div>
   </div>
 
 <?php

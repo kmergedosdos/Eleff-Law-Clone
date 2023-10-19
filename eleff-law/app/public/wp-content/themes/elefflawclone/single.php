@@ -17,19 +17,21 @@ while (have_posts()) {
     </p>
   </div>
 
-  <div class="generic-content">
-    <h1><?php the_title(); ?></h1>
-    <div>
-      <p>
-        On Behalf of
-        <a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a> |
-        <?php the_time('M j, Y'); ?> |
-        <?php echo get_the_category_list(', '); ?>
-      </p>
-    </div>
-    <?php the_content(); ?>
-  </div>
 
+  <div class="page-content">
+    <div class="blog-post">
+      <h1><?php the_title(); ?></h1>
+      <div>
+        <p>
+          On Behalf of
+          <a href="<?php echo get_site_url(); ?>"><?php echo get_bloginfo('name'); ?></a> |
+          <?php the_time('M j, Y'); ?> |
+          <?php echo get_the_category_list(', '); ?>
+        </p>
+      </div>
+      <?php the_content(); ?>
+    </div>
+  </div>
 <?php
 }
 get_footer();
