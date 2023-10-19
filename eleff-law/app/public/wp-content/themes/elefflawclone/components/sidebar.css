@@ -40,9 +40,29 @@
   text-decoration-color: transparent;
   transition: var(--transition-fade);
 }
-#menu-sidebar-menu > .menu-item:hover > a {
+
+#menu-sidebar-menu > .menu-item > a:hover {
   color: var(--color-primary);
   text-decoration-color: var(--color-primary);
+}
+
+#menu-sidebar-menu > .current-menu-item > a {
+  color: var(--color-primary);
+}
+
+#menu-sidebar-menu > .menu-item-has-children {
+  position: relative;
+}
+#menu-sidebar-menu > .menu-item-has-children > a {
+  margin-right: 1em;
+}
+#menu-sidebar-menu > .menu-item-has-children > .action {
+  position: absolute;
+  top: 1.15em;
+  right: 0;
+}
+#menu-sidebar-menu > .menu-item-has-children > .action.hidden {
+  visibility: hidden;
 }
 
 /* CHILD/SUB MENU ITEMS */
@@ -50,6 +70,8 @@
 #menu-sidebar-menu .sub-menu {
   list-style: none;
   padding-left: 1em;
+  overflow: hidden;
+  transition: var(--transition-fade);
 }
 
 #menu-sidebar-menu .sub-menu > .menu-item {
@@ -81,4 +103,8 @@
 #menu-sidebar-menu .sub-menu > .menu-item > a:hover {
   color: var(--color-primary);
   text-decoration-color: var(--color-primary);
+}
+
+#menu-sidebar-menu .sub-menu > .current-menu-item > a {
+  color: var(--color-primary);
 }

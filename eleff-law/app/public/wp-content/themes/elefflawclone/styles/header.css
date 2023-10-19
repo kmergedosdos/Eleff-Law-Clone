@@ -46,6 +46,7 @@ header .menu {
   justify-content: flex-end;
   align-items: center;
   gap: 1.2em;
+  flex-wrap: wrap;
   color: var(--color-white);
 }
 
