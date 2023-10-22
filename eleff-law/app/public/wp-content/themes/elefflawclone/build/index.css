@@ -16,6 +16,7 @@
   --bg-color-black: #333333;
   --bg-color-black-dark1: #313131;
   --width-max-content: 1920px;
+  --height-header: 150px;
   --transition-fade: all 0.3s ease;
 }
 
