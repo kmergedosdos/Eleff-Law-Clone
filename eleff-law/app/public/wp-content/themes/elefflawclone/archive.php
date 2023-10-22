@@ -1,9 +1,7 @@
 <?php
 get_header();
 
-$parentPageId = wp_get_post_parent_id(get_the_ID());
-$parentPageTitle = get_the_title($parentPageId);
-$parentPageUrl = get_permalink($parentPageId);
+$archivePageTitle = get_the_archive_title();
 ?>
 
 <?php include('components/page-banner.php') ?>
@@ -11,7 +9,11 @@ $parentPageUrl = get_permalink($parentPageId);
 <div class="breadcrumb">
   <p>
     <span><a href="<?php echo site_url(); ?>">Home</a></span>
-    <?php if (is_category()) { ?>
+    <?php
+    if (is_category()) {
+      $archivePageTitle = single_cat_title('', false);
+
+    ?>
       <span>Category: "<?php single_cat_title(); ?>"</span>
     <?php }
 
@@ -36,7 +38,7 @@ $parentPageUrl = get_permalink($parentPageId);
   <?php include('components/blog-sidebar.php'); ?>
 
   <div class="generic-content">
-    <h1>Welcome To Our Legal Blog</h1>
+    <h1><?php echo $archivePageTitle; ?></h1>
 
     <?php include('components/blog-posts.php'); ?>
   </div>

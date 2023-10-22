@@ -1,8 +1,6 @@
 <?php
 get_header();
 
-$parentPageId = wp_get_post_parent_id(get_the_ID());
-
 while (have_posts()) {
   the_post();
 ?>

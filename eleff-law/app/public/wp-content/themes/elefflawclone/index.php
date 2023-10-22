@@ -1,9 +1,5 @@
 <?php
 get_header();
-
-$parentPageId = wp_get_post_parent_id(get_the_ID());
-$parentPageTitle = get_the_title($parentPageId);
-$parentPageUrl = get_permalink($parentPageId);
 ?>
 
 <?php include('components/page-banner.php') ?>
