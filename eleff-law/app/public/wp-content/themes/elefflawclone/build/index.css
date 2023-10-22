@@ -1,3 +1,4 @@
+@import url("../components/blog-sidebar.css");
 @import url("../components/page-banner.css");
 @import url("../components/sidebar.css");
 @import url("../styles/breadcrumb.css");
@@ -22,6 +23,7 @@
 *::before,
 *::after {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -48,6 +50,35 @@ h6 {
 
 h1 {
   margin-top: 0;
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+p,
+a,
+button,
+input,
+label {
+  font-size: inherit;
 }
 
 p {

@@ -42,3 +42,14 @@ Stack trace:
 [15-Oct-2023 15:44:51 UTC] PHP Warning:  Undefined variable $parentPageId in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\index.php on line 16
 [16-Oct-2023 15:10:21 UTC] PHP Parse error:  syntax error, unexpected token "echo" in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\archive.php on line 20
 [18-Oct-2023 17:46:34 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[21-Oct-2023 20:31:40 UTC] PHP Warning:  include(./components/blog-sidebar.php): Failed to open stream: No such file or directory in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\index.php on line 18
+[21-Oct-2023 20:31:40 UTC] PHP Warning:  include(): Failed opening './components/blog-sidebar.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\index.php on line 18
+[22-Oct-2023 09:34:59 UTC] PHP Warning:  Array to string conversion in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\single.php on line 15
+[22-Oct-2023 09:35:10 UTC] PHP Fatal error:  Cannot use [] for reading in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\single.php on line 15
+[22-Oct-2023 09:35:15 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Term could not be converted to string in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\single.php:15
+Stack trace:
+#0 C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-blog-header.php(19): require_once('C:\\Users\\kmerge...')
+#2 C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\index.php(17): require('C:\\Users\\kmerge...')
+#3 {main}
+  thrown in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\single.php on line 15

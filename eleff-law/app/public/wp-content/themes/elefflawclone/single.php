@@ -12,14 +12,19 @@ while (have_posts()) {
   <div class="breadcrumb">
     <p>
       <span><a href="<?php echo site_url(); ?>">Home</a></span>
-      <span><?php echo get_the_category_list('| '); ?></span>
+      <span>
+        <a href="<?php echo get_term_link(get_the_category()[0]); ?>">
+          <?php echo get_the_category()[0]->name; ?>
+        </a>
+      </span>
       <span><?php the_title(); ?></span>
     </p>
   </div>
 
-
   <div class="page-content">
-    <div class="blog-post">
+    <?php include('components/blog-sidebar.php'); ?>
+
+    <div class="generic-content">
       <h1><?php the_title(); ?></h1>
       <div>
         <p>

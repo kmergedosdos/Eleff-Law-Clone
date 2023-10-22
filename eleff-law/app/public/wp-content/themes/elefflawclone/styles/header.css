@@ -80,7 +80,8 @@ header .menu .menu-item-has-children > a::after {
 }
 
 header .menu .current-menu-item,
-header .menu .current-menu-parent {
+header .menu .current-menu-parent,
+header .menu .current_page_parent {
   color: var(--color-primary);
 }
 
