@@ -61,3 +61,12 @@ menuItemsWithChildren.forEach((menuItem, index) => {
     hideSubMenu();
   }
 });
+
+// EVENT LISTENER FOR ARCHIVES DROPDOWN IN THE blog-sidebar.php
+const archivesSelect = document.getElementById("archives__dropdown");
+archivesSelect.onchange = (event) => {
+  const selectedArchiveUrl = event.target.value;
+  if (selectedArchiveUrl) {
+    window.location.assign(selectedArchiveUrl);
+  }
+};
