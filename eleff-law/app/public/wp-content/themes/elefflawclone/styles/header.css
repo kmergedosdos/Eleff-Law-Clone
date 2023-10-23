@@ -1,4 +1,6 @@
-header {
+/* DESKTOP HEADER */
+
+.desktop-header {
   position: absolute;
   top: 0;
   left: 0;
@@ -7,38 +9,38 @@ header {
   height: var(--height-header);
 }
 
-header .website-info {
+.desktop-header .website-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
 }
 
-header .website-info__contact-deets {
+.desktop-header .website-info__contact-deets {
   text-align: right;
   color: white;
 }
 
-header .website-info__contact-deets span {
+.desktop-header .website-info__contact-deets span {
   font-size: 19px;
   font-weight: 700;
 }
 
-header .website-info__contact-deets span a {
+.desktop-header .website-info__contact-deets span a {
   color: var(--color-primary);
   text-decoration-color: transparent;
   transition: all 0.3s ease;
 }
 
-header .website-info__contact-deets span a:hover {
+.desktop-header .website-info__contact-deets span a:hover {
   color: var(--color-white);
 }
 
-header .menu-header-menu-container {
+.desktop-header .menu-header-menu-container {
   padding: 0 5%;
 }
 
-header .menu {
+.desktop-header .menu {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -50,26 +52,26 @@ header .menu {
   color: var(--color-white);
 }
 
-header .menu .menu-item {
+.desktop-header .menu .menu-item {
   padding: 0.5em 0 0.75em 0;
   transition: color 0.3s ease;
 }
 
-header .menu .menu-item:hover {
+.desktop-header .menu .menu-item:hover {
   color: var(--color-primary);
 }
 
-header .menu .menu-item a {
+.desktop-header .menu .menu-item a {
   text-decoration-color: transparent;
   color: inherit;
 }
 
-header .menu .menu-item-has-children {
+.desktop-header .menu .menu-item-has-children {
   position: relative;
   cursor: default;
 }
 
-header .menu .menu-item-has-children > a::after {
+.desktop-header .menu .menu-item-has-children > a::after {
   content: "\f078"; /* FontAwesome Unicode */
   font-family: FontAwesome;
   font-size: 0.55em;
@@ -79,13 +81,13 @@ header .menu .menu-item-has-children > a::after {
   bottom: 0.2em;
 }
 
-header .menu .current-menu-item,
-header .menu .current-menu-parent,
-header .menu .current_page_parent {
+.desktop-header .menu .current-menu-item,
+.desktop-header .menu .current-menu-parent,
+.desktop-header .menu .current_page_parent {
   color: var(--color-primary);
 }
 
-header .sub-menu {
+.desktop-header .sub-menu {
   position: absolute;
   top: 100%;
   left: -1em;
@@ -99,17 +101,167 @@ header .sub-menu {
   color: var(--color-white);
 }
 
-header .menu-item-has-children:hover .sub-menu,
-header .sub-menu:hover {
+.desktop-header .menu-item-has-children:hover .sub-menu,
+.desktop-header .sub-menu:hover {
   display: initial;
 }
 
-header .sub-menu .menu-item {
+.desktop-header .sub-menu .menu-item {
   padding: 0.5em 1em;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-header .sub-menu .menu-item:hover {
+.desktop-header .sub-menu .menu-item:hover {
   background-color: var(--bg-color-black-dark1);
+}
+
+/* MOBILE HEADER */
+
+.mobile-header {
+  --mobile-header-min-height: 80px;
+  --mobile-header-z-index: 99;
+  display: none;
+}
+
+.mobile-header .logo-menu {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--bg-color-black);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--mobile-header-min-height);
+  z-index: var(--mobile-header-z-index);
+}
+
+.mobile-header .logo-menu__logo {
+  flex: 1;
+  max-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-header .logo-menu__logo > a {
+  margin: 1em;
+}
+.mobile-header .logo-menu__logo > a > img {
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+.mobile-header .logo-menu__menu {
+  width: 15%;
+  background-color: var(--bg-color-black-dark2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-header .logo-menu__menu > button {
+  border: none;
+  background-color: transparent;
+  color: var(--color-primary-dark);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-fade);
+}
+.mobile-header .logo-menu__menu > button:hover {
+  color: var(--color-primary);
+}
+
+.mobile-header .logo-menu__menu > button.close {
+  display: none;
+}
+
+.mobile-header nav {
+  width: 100%;
+  border-top: 3px solid var(--color-primary-dark);
+  padding: 1.5em;
+  background-color: var(--bg-color-black);
+  transition: var(--transition-fade);
+  position: fixed;
+  z-index: calc(var(--mobile-header-z-index) - 1);
+}
+.mobile-header nav.hidden {
+  top: -100%;
+}
+.mobile-header nav.shown {
+  top: var(--mobile-header-min-height);
+}
+
+.mobile-header .contact.button {
+  margin-top: var(--mobile-header-min-height);
+  border-radius: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary-darker2);
+  cursor: default;
+}
+.mobile-header .contact.button:hover {
+  background-color: var(--bg-color-black-dark3);
+}
+.mobile-header .contact.button > a {
+  color: var(--color-white);
+  text-decoration-color: transparent;
+  font-size: 18px;
+}
+.mobile-header .contact.button > a > i {
+  margin-right: 0.3em;
+}
+
+.mobile-header nav {
+  max-height: calc(100vh - var(--mobile-header-min-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.mobile-header nav .menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.mobile-header nav .sub-menu {
+  list-style-type: none;
+  width: 100%;
+}
+
+.mobile-header nav .menu > .menu-item,
+.mobile-header nav .sub-menu > .menu-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-header nav .menu > .menu-item-has-children > a,
+.mobile-header nav .sub-menu > .menu-item-has-children > a {
+  background-color: var(--bg-color-black-dark1);
+  font-weight: 600;
+}
+
+.mobile-header nav .menu > .menu-item > a,
+.mobile-header nav .sub-menu > .menu-item > a {
+  width: 100%;
+  padding: 1em;
+  color: var(--color-white);
+  font-size: 14px;
+  text-decoration-color: transparent;
+}
+
+.mobile-header nav .menu > .menu-item > a:hover,
+.mobile-header nav .sub-menu > .menu-item > a:hover {
+  background-color: var(--bg-color-black-dark1);
+  color: var(--color-primary-dark);
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 980px) {
+  .desktop-header {
+    display: none;
+  }
+  .mobile-header {
+    display: block;
+  }
 }

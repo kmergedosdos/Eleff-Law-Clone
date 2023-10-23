@@ -11,10 +11,13 @@
   --color-primary: #d4da1a;
   --color-primary-dark: #929615;
   --color-primary-darker: #787b00;
+  --color-primary-darker2: #565907;
   --color-text-h: #666666;
   --color-text-p: #3e3e40;
   --bg-color-black: #333333;
   --bg-color-black-dark1: #313131;
+  --bg-color-black-dark2: #202021;
+  --bg-color-black-dark3: #0a0808;
   --width-max-content: 1920px;
   --height-header: 150px;
   --transition-fade: all 0.3s ease;
@@ -112,5 +115,5 @@ a:hover {
 }
 
 .button:hover {
-  background: black;
+  background: var(--bg-color-black-dark3);
 }

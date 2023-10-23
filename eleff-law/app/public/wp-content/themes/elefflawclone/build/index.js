@@ -1,3 +1,28 @@
+// HEADER MENU BUTTON EVENT LISTENER
+const mobileHeaderMenuOpenButton = document.querySelector(
+  ".mobile-header .logo-menu__menu > button.open"
+);
+const mobileHeaderMenuCloseButton = document.querySelector(
+  ".mobile-header .logo-menu__menu > button.close"
+);
+const mobileHeaderNavigation = document.querySelector(".mobile-header nav");
+
+mobileHeaderMenuOpenButton.addEventListener("click", () => {
+  mobileHeaderMenuOpenButton.style.display = "none";
+  mobileHeaderMenuCloseButton.style.display = "block";
+
+  mobileHeaderNavigation.classList.remove("hidden");
+  mobileHeaderNavigation.classList.add("shown");
+});
+
+mobileHeaderMenuCloseButton.addEventListener("click", () => {
+  mobileHeaderMenuCloseButton.style.display = "none";
+  mobileHeaderMenuOpenButton.style.display = "block";
+
+  mobileHeaderNavigation.classList.remove("shown");
+  mobileHeaderNavigation.classList.add("hidden");
+});
+
 // add plus or minus icons in sidebar menu items with children
 const minusIcon =
   '<span class="action action--hide"><i class="fa-solid fa-minus"></i></span>';
@@ -64,9 +89,11 @@ menuItemsWithChildren.forEach((menuItem, index) => {
 
 // EVENT LISTENER FOR ARCHIVES DROPDOWN IN THE blog-sidebar.php
 const archivesSelect = document.getElementById("archives__dropdown");
-archivesSelect.onchange = (event) => {
-  const selectedArchiveUrl = event.target.value;
-  if (selectedArchiveUrl) {
-    window.location.assign(selectedArchiveUrl);
-  }
-};
+if (archivesSelect) {
+  archivesSelect.onchange = (event) => {
+    const selectedArchiveUrl = event.target.value;
+    if (selectedArchiveUrl) {
+      window.location.assign(selectedArchiveUrl);
+    }
+  };
+}
