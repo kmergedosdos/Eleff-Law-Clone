@@ -1,4 +1,4 @@
-// HEADER MENU BUTTON EVENT LISTENER
+// MOBILE HEADER MENU BUTTON EVENT LISTENER
 const mobileHeaderMenuOpenButton = document.querySelector(
   ".mobile-header .logo-menu__menu > button.open"
 );
@@ -21,6 +21,44 @@ mobileHeaderMenuCloseButton.addEventListener("click", () => {
 
   mobileHeaderNavigation.classList.remove("shown");
   mobileHeaderNavigation.classList.add("hidden");
+});
+
+// MOBILE HEADER MENU WITH CHILDREN EVENT LISTENER
+const mobileHeaderMenuItemsWithChildren = document.querySelectorAll(
+  ".mobile-header nav .menu > .menu-item-has-children"
+);
+
+const mobileHeaderSubMenuHeights = [];
+mobileHeaderMenuItemsWithChildren.forEach((item) => {
+  const itemPlusIcon = '<i class="fa-solid fa-plus"></i>';
+  const itemMinusIcon = '<i class="fa-solid fa-minus"></i>';
+  item.innerHTML += itemPlusIcon;
+  item.innerHTML += itemMinusIcon;
+
+  const itemSubMenu = item.querySelector(".sub-menu");
+  mobileHeaderSubMenuHeights.push(itemSubMenu.clientHeight);
+});
+
+mobileHeaderMenuItemsWithChildren.forEach((item, index) => {
+  const itemPlusIcon = item.querySelector(".fa-plus");
+  const itemMinusIcon = item.querySelector(".fa-minus");
+
+  const itemSubMenu = item.querySelector(".sub-menu");
+  itemSubMenu.style.height = 0; //initially set height to 0
+
+  item.addEventListener("click", () => {
+    if (itemSubMenu.clientHeight) {
+      itemSubMenu.style.visibility = "hidden";
+      itemSubMenu.style.height = 0;
+      itemPlusIcon.style.visibility = "visible";
+      itemMinusIcon.style.visibility = "hidden";
+    } else {
+      itemSubMenu.style.visibility = "visible";
+      itemSubMenu.style.height = `${mobileHeaderSubMenuHeights[index]}px`;
+      itemMinusIcon.style.visibility = "visible";
+      itemPlusIcon.style.visibility = "hidden";
+    }
+  });
 });
 
 // add plus or minus icons in sidebar menu items with children
