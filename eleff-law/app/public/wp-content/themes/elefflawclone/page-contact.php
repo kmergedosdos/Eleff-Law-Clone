@@ -12,6 +12,8 @@ while (have_posts()) {
   <?php include('components/page-banner.php') ?>
 
   <div class="breadcrumb">
+    <?php include('components/animated-lollipop.php'); ?>
+
     <p>
       <span><a href="<?php echo site_url(); ?>">Home</a></span>
       <?php if ($parentPageId) { ?>

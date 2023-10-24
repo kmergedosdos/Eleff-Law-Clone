@@ -1,0 +1,30 @@
+/* animated img (up-down animation) */
+/* NOTE: make sure parent element has position: relative in order for this to work */
+#animated-lollipop {
+  position: absolute;
+  top: 0;
+  left: 1em;
+  z-index: -1;
+  animation-name: up-down-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@media screen and (max-width: 980px) {
+  #animated-lollipop {
+    display: none;
+  }
+}
+
+@keyframes up-down-animation {
+  0% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

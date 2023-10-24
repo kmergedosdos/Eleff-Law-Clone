@@ -1,6 +1,7 @@
 .breadcrumb {
   box-shadow: 0 1px #33333311;
   padding: 1em 9%;
+  position: relative;
 }
 
 .breadcrumb p {

@@ -53,3 +53,5 @@ Stack trace:
 #2 C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\index.php(17): require('C:\\Users\\kmerge...')
 #3 {main}
   thrown in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\single.php on line 15
+[24-Oct-2023 16:56:06 UTC] PHP Warning:  include(./components/animated-lollipop.php): Failed to open stream: No such file or directory in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\page.php on line 15
+[24-Oct-2023 16:56:06 UTC] PHP Warning:  include(): Failed opening './components/animated-lollipop.php' for inclusion (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\kmerge\Local Sites\eleff-law-clone\eleff-law\app\public\wp-content\themes\elefflawclone\page.php on line 15
