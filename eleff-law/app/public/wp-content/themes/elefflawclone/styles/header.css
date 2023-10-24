@@ -229,6 +229,14 @@
   overflow: hidden;
 }
 
+.mobile-header nav .sub-menu > .menu-item {
+  transition-delay: 0.15s;
+}
+.mobile-header nav .sub-menu.hidden > .menu-item {
+  visibility: hidden;
+  transition-delay: 0s;
+}
+
 .mobile-header nav .menu > .menu-item,
 .mobile-header nav .sub-menu > .menu-item {
   display: flex;
@@ -243,15 +251,16 @@
 
 .mobile-header nav .menu > .menu-item > i,
 .mobile-header nav .sub-menu > .menu-item > i {
+  color: inherit;
   position: absolute;
   top: 1em;
   right: 1em;
+  z-index: 1;
 }
 
-.mobile-header nav .menu > .menu-item-has-children > a,
-.mobile-header nav .sub-menu > .menu-item-has-children > a {
-  background-color: var(--bg-color-black-dark1);
-  font-weight: 600;
+.mobile-header nav .menu > .menu-item > a {
+  z-index: 1;
+  background-color: var(--bg-color-black);
 }
 
 .mobile-header nav .menu > .menu-item > a,
@@ -267,6 +276,12 @@
 .mobile-header nav .sub-menu > .menu-item > a:hover {
   background-color: var(--bg-color-black-dark1);
   color: var(--color-primary-dark);
+}
+
+.mobile-header nav .menu > .menu-item-has-children > a,
+.mobile-header nav .sub-menu > .menu-item-has-children > a {
+  background-color: var(--bg-color-black-dark1);
+  font-weight: 600;
 }
 
 /* BREAKPOINTS */

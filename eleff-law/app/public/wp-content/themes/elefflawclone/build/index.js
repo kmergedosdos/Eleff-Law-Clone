@@ -28,7 +28,7 @@ const mobileHeaderMenuItemsWithChildren = document.querySelectorAll(
   ".mobile-header nav .menu > .menu-item-has-children"
 );
 
-const mobileHeaderSubMenuHeights = [];
+// const mobileHeaderSubMenuHeights = [];
 mobileHeaderMenuItemsWithChildren.forEach((item) => {
   const itemPlusIcon = '<i class="fa-solid fa-plus"></i>';
   const itemMinusIcon = '<i class="fa-solid fa-minus"></i>';
@@ -36,27 +36,35 @@ mobileHeaderMenuItemsWithChildren.forEach((item) => {
   item.innerHTML += itemMinusIcon;
 
   const itemSubMenu = item.querySelector(".sub-menu");
-  mobileHeaderSubMenuHeights.push(itemSubMenu.clientHeight);
+  itemSubMenu.style.marginTop = `-${itemSubMenu.clientHeight}px`;
+  itemSubMenu.classList.add("hidden");
 });
+
+window.onresize = () => {
+  mobileHeaderMenuItemsWithChildren.forEach((item) => {
+    const itemSubMenu = item.querySelector(".sub-menu");
+    itemSubMenu.style.marginTop = `-${itemSubMenu.clientHeight}px`;
+    itemSubMenu.classList.add("hidden");
+  });
+};
 
 mobileHeaderMenuItemsWithChildren.forEach((item, index) => {
   const itemPlusIcon = item.querySelector(".fa-plus");
   const itemMinusIcon = item.querySelector(".fa-minus");
-
   const itemSubMenu = item.querySelector(".sub-menu");
-  itemSubMenu.style.height = 0; //initially set height to 0
 
   item.addEventListener("click", () => {
-    if (itemSubMenu.clientHeight) {
-      itemSubMenu.style.visibility = "hidden";
-      itemSubMenu.style.height = 0;
-      itemPlusIcon.style.visibility = "visible";
-      itemMinusIcon.style.visibility = "hidden";
-    } else {
-      itemSubMenu.style.visibility = "visible";
-      itemSubMenu.style.height = `${mobileHeaderSubMenuHeights[index]}px`;
+    const style = getComputedStyle(itemSubMenu);
+    if (parseInt(style.marginTop)) {
+      itemSubMenu.style.marginTop = `0`;
+      itemSubMenu.classList.remove("hidden");
       itemMinusIcon.style.visibility = "visible";
       itemPlusIcon.style.visibility = "hidden";
+    } else {
+      itemSubMenu.style.marginTop = `-${itemSubMenu.clientHeight}px`;
+      itemSubMenu.classList.add("hidden");
+      itemPlusIcon.style.visibility = "visible";
+      itemMinusIcon.style.visibility = "hidden";
     }
   });
 });
