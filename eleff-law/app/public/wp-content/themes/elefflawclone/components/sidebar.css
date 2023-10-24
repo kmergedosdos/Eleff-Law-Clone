@@ -108,3 +108,10 @@
 #menu-sidebar-menu .sub-menu > .current-menu-item > a {
   color: var(--color-primary);
 }
+
+@media screen and (max-width: 980px) {
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+}
