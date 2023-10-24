@@ -1,32 +1,29 @@
 .page-banner {
-  position: relative;
-  height: 500px;
-}
-
-.page-banner__bg-image {
-  height: 100%;
+  background-image: url("../images/banner-background1.jpg");
   background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  padding-top: var(--height-header);
 }
 
 .page-banner__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 350px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 2.5rem;
+  padding: 0 3rem;
 }
 
 .page-banner__content__img {
   height: 100%;
-  object-fit: contain;
 }
 
 .page-banner__content__text {
   font-size: 42px;
+  padding-bottom: 1em;
 }
 
 .page-banner__content__text .heading {
@@ -36,4 +33,39 @@
 
 .page-banner__content__text span {
   color: var(--color-white);
+}
+
+@media screen and (max-width: 980px) {
+  .page-banner {
+    height: fit-content;
+    padding: 0;
+  }
+  .page-banner__content {
+    text-align: center;
+    padding: 3em 1em;
+  }
+  .page-banner__content__img {
+    display: none;
+  }
+  .page-banner__content__text {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-banner__content__text .heading {
+    font-size: 34px;
+  }
+  .page-banner__content__text span {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-banner__content__text .heading {
+    font-size: 26px;
+  }
+  .page-banner__content__text span {
+    font-size: 22px;
+  }
 }
