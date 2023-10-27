@@ -26,8 +26,15 @@ while (have_posts()) {
   <div class="page-content">
     <div class="generic-content">
       <h1>
-        CONTACT PAGE CONTENT GOES HERE
+        CONTACT THE ELEFF LAW GROUP
       </h1>
+      <div class="page-contact__message-form">
+        <p>
+          While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with an attorney, please call or complete the intake form below.
+        </p>
+        <p>Fields marked with an <span class="page-contact__field-required">*</span> are required</p>
+      </div>
+      <?php include('components/page-contact-form.php') ?>
     </div>
   </div>
 
