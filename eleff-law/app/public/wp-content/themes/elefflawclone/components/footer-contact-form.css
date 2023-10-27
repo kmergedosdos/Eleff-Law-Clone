@@ -109,6 +109,7 @@
 @media screen and (max-width: 768px) {
   .footer-contact-form .form-field-group {
     flex-direction: column;
+    gap: 0;
   }
 }
 
