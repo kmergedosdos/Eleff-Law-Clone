@@ -150,15 +150,20 @@ var closeButton = document.getElementById("disclaimer__close");
 var showDisclaimerLink = document.getElementById("showDisclaimer");
 var disclaimer = document.querySelector(".disclaimer");
 
-closeButton.addEventListener("click", function () {
-  disclaimer.style.display = "none";
-});
-
-showDisclaimerLink.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (disclaimer.style.display === "none" || disclaimer.style.display === "") {
-    disclaimer.style.display = "block";
-  } else {
+if (closeButton && showDisclaimerLink) {
+  closeButton.addEventListener("click", function () {
     disclaimer.style.display = "none";
-  }
-});
+  });
+
+  showDisclaimerLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (
+      disclaimer.style.display === "none" ||
+      disclaimer.style.display === ""
+    ) {
+      disclaimer.style.display = "block";
+    } else {
+      disclaimer.style.display = "none";
+    }
+  });
+}
