@@ -21,7 +21,7 @@
 }
 
 .page-contact__form-details input:not([type="submit"], [type="checkbox"]),
-textarea,
+.page-contact__issue-description textarea,
 select {
   width: 100%;
   padding: 16px 20px;
