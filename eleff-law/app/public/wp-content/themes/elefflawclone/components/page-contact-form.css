@@ -117,7 +117,7 @@ textarea:focus {
   font-weight: 400;
   font-size: 12px;
   height: auto;
-  border: 2px solid #929615;
+  border: 2px solid var(--color-primary-dark);
   float: left;
   margin-right: 12px;
   border-radius: 30px;
@@ -125,6 +125,9 @@ textarea:focus {
   white-space: normal;
 }
 
+.page-contact__form-details .page-contact__form-submit > .button:hover {
+  border-color: var(--bg-color-black-dark3);
+}
 .page-contact__form-details .page-contact__form-submit > .button:focus {
   border-radius: 0;
 }

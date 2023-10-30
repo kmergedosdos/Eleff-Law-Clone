@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
   <?php
   $websiteLogoImgUrl = get_template_directory_uri() . '/images/brand.png';
-  $contactNumber = "+1-800-765-2662"
+  $contactNumber = "800-765-2662"
   ?>
 
   <header>
@@ -25,7 +25,7 @@
         <div class="website-info__contact-deets">
           <p>
             For Strategic And Experienced Legal Guidance, <br>
-            Call The Eleff Law Group At <span><a href="tel:<?php echo $contactNumber; ?>"><?php echo $contactNumber; ?></a></span>
+            Call The Eleff Law Group At <span><a href="tel:+1-<?php echo $contactNumber; ?>"><?php echo $contactNumber; ?></a></span>
           </p>
         </div>
       </div>
@@ -64,7 +64,7 @@
       </nav>
 
       <div class="contact button">
-        <a href="tel:<?php echo $contactNumber; ?>">
+        <a href="tel:+1-<?php echo $contactNumber; ?>">
           <i class="fa-solid fa-phone"></i> Call
         </a>
       </div>
