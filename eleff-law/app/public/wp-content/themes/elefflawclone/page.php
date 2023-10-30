@@ -24,7 +24,12 @@ while (have_posts()) {
   </div>
 
   <div class="page-content">
-    <?php include('components/sidebar.php') ?>
+    <?php
+    // only display sidebar if page is not the following pages
+    if (!in_array(get_post_field('post_name'), ['about', 'disclaimer', 'privacy', 'site-map'])) {
+      include('components/sidebar.php');
+    };
+    ?>
 
     <div class="generic-content">
       <?php the_content(); ?>
