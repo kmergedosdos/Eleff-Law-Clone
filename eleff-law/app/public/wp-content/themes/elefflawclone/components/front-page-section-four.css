@@ -1,19 +1,17 @@
 .front-page-section-four__content {
   width: 100%;
-  height: 75vh;
   background-image: url(../images/fp-section-four-bg.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  display: flex;
-  align-items: center;
+  padding: 6em 0;
 }
 
 .front-page-section-four__content .why-eleff-law-group {
   width: 55%;
   background-color: rgba(51, 51, 51, 0.72);
-  border-left: 10px solid #d4da1a;
+  border-left: 10px solid var(--color-primary);
   position: relative;
   right: -38%;
 }
@@ -31,13 +29,42 @@
   padding-right: 50px;
 }
 
-.front-page-section-four__content .why-eleff-law-group .description h2 {
-  font-size: 45px;
+.front-page-section-four__content .why-eleff-law-group .description .heading {
   color: var(--color-white);
-  line-height: 1.2em;
-  text-transform: capitalize;
 }
 
-.divider {
-  padding: 20px;
+@media screen and (max-width: 980px) {
+  .front-page-section-four__content {
+    padding: 3em;
+  }
+  .front-page-section-four__content .why-eleff-law-group {
+    width: 100%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .front-page-section-four__content {
+    padding: 2em;
+  }
+  .front-page-section-four__content .why-eleff-law-group {
+    width: 100%;
+    right: 0;
+  }
+  .front-page-section-four__content .why-eleff-law-group .description {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .front-page-section-four__content {
+    padding: 1em;
+  }
+  .front-page-section-four__content .why-eleff-law-group {
+    width: 100%;
+    right: 0;
+  }
+  .front-page-section-four__content .why-eleff-law-group .description {
+    padding: 1em;
+  }
 }
