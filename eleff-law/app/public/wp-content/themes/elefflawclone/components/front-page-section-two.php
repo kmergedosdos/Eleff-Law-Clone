@@ -5,7 +5,7 @@
         Estate Planning
       </div>
     </a>
-    <a href="/probate/" class="pa probate-trust-admin">
+    <a href="/estate-planning-and-probate/probate/" class="pa probate-trust-admin">
       <div class="text">
         Probate & Trust Administration
       </div>

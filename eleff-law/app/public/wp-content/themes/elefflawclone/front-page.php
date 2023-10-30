@@ -21,6 +21,7 @@ get_header();
 <div class="front-page">
   <?php
   include('components/front-page-section-one.php');
+  include('components/front-page-section-two.php');
   ?>
 </div>
 
