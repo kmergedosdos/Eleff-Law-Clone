@@ -24,6 +24,10 @@
   .front-page .heading {
     text-align: center;
   }
+  .front-page .subheading-container {
+    border: none;
+    text-align: center;
+  }
   .front-page .subheading {
     font-size: 28px;
     text-align: center;
@@ -33,10 +37,6 @@
 @media screen and (max-width: 768px) {
   .front-page .heading {
     font-size: 38px;
-  }
-  .front-page .subheading-container {
-    border: none;
-    text-align: center;
   }
   .front-page .subheading {
     font-size: 22px;
