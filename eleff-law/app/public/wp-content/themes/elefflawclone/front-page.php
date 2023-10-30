@@ -18,6 +18,12 @@ get_header();
   </div>
 </div>
 
+<div class="front-page">
+  <?php
+  include('components/front-page-section-one.php');
+  ?>
+</div>
+
 <?php
 get_footer();
 ?>

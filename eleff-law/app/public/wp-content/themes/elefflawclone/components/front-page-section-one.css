@@ -1,0 +1,113 @@
+.front-page-section-one {
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.94)
+    ),
+    url("../images/business.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 5%;
+}
+
+.front-page-section-one .content {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 2em;
+}
+
+.front-page-section-one .content__image {
+  width: 100%;
+}
+
+.front-page-section-one .content__image > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.front-page-section-one .slider {
+  --slider-height: 150px;
+  --slide-width: 25%;
+  --slide-length: 7;
+  --animation-speed: 40s;
+  background: var(--color-white);
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.125);
+  width: 100%;
+  height: var(--slider-height);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.front-page-section-one .slider::before,
+.front-page-section-one .slider::after {
+  content: "";
+  height: var(--slider-height);
+  position: absolute;
+  width: 20px;
+  z-index: 2;
+  background-color: var(--color-white);
+}
+
+.front-page-section-one .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.front-page-section-one .slider::before {
+  left: 0;
+  top: 0;
+}
+
+.front-page-section-one .slider > .slider__track {
+  animation: scroll var(--animation-speed) linear infinite;
+  display: flex;
+  height: 100%;
+  width: calc(var(--slide-width) * var(--slide-length) * 2);
+}
+
+.front-page-section-one .slider > .slider__track > .slide {
+  width: calc(var(--slide-width) / 2);
+  min-width: calc(var(--slide-width) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--slide-width) * var(--slide-length)));
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .front-page-section-one .content {
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .front-page-section-one .slider > .slider__track {
+    width: calc(100vw * var(--slide-length) * 2);
+  }
+  .front-page-section-one .slider > .slider__track > .slide {
+    width: 100vw;
+    min-width: 100vw;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1 * 100vw * var(--slide-length)));
+    }
+  }
+}

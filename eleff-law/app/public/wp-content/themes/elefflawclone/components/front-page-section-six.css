@@ -1,0 +1,63 @@
+.page-content.section-six {
+  background-repeat: repeat;
+  background-image: linear-gradient(
+      180deg,
+      rgba(238, 238, 238, 0.94) 0%,
+      #eee 100%
+    ),
+    url(../images/pattern-2.png);
+}
+
+.front-page-section-six__content .law-services-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.front-page-section-six__content .law-services-content .description-video p {
+  max-width: 80%;
+  line-height: 1.2em;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 32px;
+  letter-spacing: 1px;
+  border-left: 6px solid #929615;
+  padding: 2px;
+  padding-left: 20px;
+  margin-top: 30px;
+  margin-left: -20px;
+}
+
+.front-page-section-six__content .law-services-content .description-text h2 {
+  margin-top: -10px;
+  font-size: 48px;
+  line-height: 54px;
+  color: var(--bg-color-black);
+}
+
+.front-page-section-six__content .law-services-content .description-text span {
+  color: #666d00;
+  font-style: italic;
+}
+
+.front-page-section-six__content .law-services-content .description-text {
+  margin-left: -100px;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.front-page-section-six__content .law-services-content .description-text ul li {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.front-page-section-six__content
+  .law-services-content
+  .description-text
+  li:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  color: #929615;
+  font-size: 16px;
+  content: "\f058";
+  left: 44%;
+}

@@ -28,7 +28,6 @@ const mobileHeaderMenuItemsWithChildren = document.querySelectorAll(
   ".mobile-header nav .menu > .menu-item-has-children"
 );
 
-// const mobileHeaderSubMenuHeights = [];
 mobileHeaderMenuItemsWithChildren.forEach((item) => {
   const itemPlusIcon = '<i class="fa-solid fa-plus"></i>';
   const itemMinusIcon = '<i class="fa-solid fa-minus"></i>';
@@ -39,14 +38,6 @@ mobileHeaderMenuItemsWithChildren.forEach((item) => {
   itemSubMenu.style.marginTop = `-${itemSubMenu.clientHeight}px`;
   itemSubMenu.classList.add("hidden");
 });
-
-window.onresize = () => {
-  mobileHeaderMenuItemsWithChildren.forEach((item) => {
-    const itemSubMenu = item.querySelector(".sub-menu");
-    itemSubMenu.style.marginTop = `-${itemSubMenu.clientHeight}px`;
-    itemSubMenu.classList.add("hidden");
-  });
-};
 
 mobileHeaderMenuItemsWithChildren.forEach((item, index) => {
   const itemPlusIcon = item.querySelector(".fa-plus");
@@ -167,3 +158,20 @@ if (closeButton && showDisclaimerLink) {
     }
   });
 }
+
+// FRONT PAGE SECTION ONE SLIDER ANIMATION
+const frontPageSliderTrack = document.querySelector(
+  ".front-page-section-one .slider__track"
+);
+if (frontPageSliderTrack) {
+  frontPageSliderTrack.innerHTML += frontPageSliderTrack.innerHTML;
+}
+
+// WINDOW RESIZE EVENT LISTENER
+window.onresize = () => {
+  mobileHeaderMenuItemsWithChildren.forEach((item) => {
+    const itemSubMenu = item.querySelector(".sub-menu");
+    itemSubMenu.style.marginTop = `-${itemSubMenu.clientHeight}px`;
+    itemSubMenu.classList.add("hidden");
+  });
+};

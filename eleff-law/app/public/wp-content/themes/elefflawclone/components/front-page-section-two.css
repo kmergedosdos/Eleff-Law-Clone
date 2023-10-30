@@ -1,0 +1,221 @@
+.front-page-section-two__content {
+  width: 100%;
+}
+
+.front-page-section-two__content .practice-areas {
+  display: flex;
+  justify-content: space-between;
+}
+
+.front-page-section-two__content .practice-areas .pa {
+  position: relative;
+  height: 50vh;
+  width: 100px;
+  flex: 1;
+  margin: 0;
+  border-top: 10px solid var(--color-white);
+  border-bottom: 10px solid var(--color-primary-dark);
+  background-size: cover;
+}
+
+.front-page-section-two__content .practice-areas .pa:hover {
+  border-top: 10px solid #929615;
+  border-bottom: 10px solid #eee;
+  background-repeat: no-repeat;
+  background-blend-mode: normal;
+  transition: all 0.3s ease-in-out;
+}
+
+.front-page-section-two__content .practice-areas .pa:hover .text {
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+  margin-top: -10px;
+}
+
+.front-page-section-two__content .practice-areas .pa.estate-planning {
+  background-size: cover;
+  background-color: #21242b;
+}
+
+.front-page-section-two__content .practice-areas .pa.estate-planning:hover {
+  background-image: linear-gradient(
+      180deg,
+      rgba(33, 40, 50, 0.85) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/pa-probate-trusts.jpg);
+}
+
+.front-page-section-two__content .practice-areas .pa.probate-trust-admin {
+  background-size: cover;
+  background-image: linear-gradient(
+      180deg,
+      rgba(57, 61, 70, 0.75) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-probate-trusts.jpg);
+}
+
+.front-page-section-two__content .pa.probate-trust-admin:hover {
+  background-image: linear-gradient(
+      180deg,
+      rgba(33, 40, 50, 0.85) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-probate-trusts.jpg);
+}
+
+.front-page-section-two__content .practice-areas .pa.prenuptial-agreements {
+  background-size: cover;
+  background-image: linear-gradient(
+      180deg,
+      rgba(57, 61, 70, 0.75) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-prenups.jpg);
+}
+
+.front-page-section-two__content .pa.pa.prenuptial-agreements:hover {
+  background-image: linear-gradient(
+      180deg,
+      rgba(33, 40, 50, 0.85) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-prenups.jpg);
+}
+
+.front-page-section-two__content .pa.probate-trust-admin:hover {
+  background-image: linear-gradient(
+      180deg,
+      rgba(33, 40, 50, 0.85) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-probate-trusts.jpg);
+}
+
+.front-page-section-two__content .practice-areas .pa.business-transactions {
+  background-image: linear-gradient(
+      180deg,
+      rgba(57, 61, 70, 0.75) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-business.jpg);
+}
+
+.front-page-section-two__content
+  .practice-areas
+  .pa.business-transactions:hover {
+  background-image: linear-gradient(
+      180deg,
+      rgba(33, 40, 50, 0.85) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-business.jpg);
+}
+
+.front-page-section-two__content .practice-areas .pa.commercial-real-estate {
+  background-image: linear-gradient(
+      180deg,
+      rgba(57, 61, 70, 0.75) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-real-estate.jpg);
+}
+
+.front-page-section-two__content
+  .practice-areas
+  .pa.commercial-real-estate:hover {
+  background-image: linear-gradient(
+      180deg,
+      rgba(33, 40, 50, 0.85) 0%,
+      rgba(33, 40, 50, 0.85) 100%
+    ),
+    url(../images/practice-areas/pa-real-estate.jpg);
+}
+
+.front-page-section-two__content .practice-areas .pa .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+}
+
+.front-page-section-two__content .practice-areas .pa .text {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.front-page-section-two__content .practice-areas .pa.pa.estate-planning .text {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1280px) {
+  .front-page-section-two__content {
+    width: 768px;
+  }
+
+  .front-page-section-two__content .practice-areas {
+    display: grid;
+    column-gap: 250px;
+    grid-template-columns: 100px 100px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .front-page-section-two__content .practice-areas .pa {
+    width: 300px;
+    height: 38vh;
+    margin-top: 50px;
+    border-top: 7px solid var(--color-white);
+    border-bottom: 7px solid var(--color-primary-dark);
+  }
+
+  .front-page-section-two__content .practice-areas .pa.estate-planning {
+    padding-right: 10px;
+  }
+
+  .front-page-section-two__content .practice-areas .pa:hover {
+    border-top: 7px solid #929615;
+    border-bottom: 7px solid #eee;
+  }
+
+  .front-page-section-two__content .practice-areas .pa:hover .text {
+    color: var(--color-white);
+    transition: all 0.3s ease-in-out;
+    margin-top: -10px;
+  }
+
+  .front-page-section-two__content .practice-areas .pa .text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .front-page-section-two__content {
+    width: 100%;
+  }
+
+  .front-page-section-two__content .practice-areas {
+    display: grid;
+    column-gap: 150px;
+    grid-template-columns: 100px 100px;
+    /* justify-content: center;
+        align-items: center; */
+    /* width: 100%; */
+  }
+
+  .front-page-section-two__content .practice-areas .pa {
+    width: 200px;
+  }
+
+  .front-page-section-two__content .practice-areas .pa.estate-planning {
+    padding-right: 10px;
+  }
+}
