@@ -36,6 +36,12 @@
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
+        <div class="disclaimer-checkbox">
+          <input type="checkbox" name="read-disclaimer" id="readDisclaimer" required>
+          <label for="readDisclaimer">
+            I have read the disclaimer. <span>*</span>
+          </label>
+        </div>
       </div>
       <button type="submit" class="button button--submit">Schedule Your Free Consultation Today</button>
     </div>

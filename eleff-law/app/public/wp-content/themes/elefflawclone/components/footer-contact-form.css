@@ -76,6 +76,17 @@
   position: relative;
 }
 
+.footer-contact-form .actions .disclaimer-checkbox {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.footer-contact-form .actions .disclaimer-checkbox > label > span {
+  color: var(--color-primary);
+}
+
 .footer-contact-form .actions .disclaimer__button--close {
   position: absolute;
   right: 5px;
