@@ -24,6 +24,7 @@ get_header();
   include('components/front-page-section-two.php');
   include('components/front-page-section-three.php');
   include('components/front-page-section-four.php');
+  include('components/front-page-section-five.php');
   ?>
 </div>
 
