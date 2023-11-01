@@ -3,6 +3,7 @@
     Receive The Practical And Proactive Legal Guidance
     <span>You Deserve</span>
   </h2>
+  <div class="divider center bg-light"></div>
   <form action="" class="form">
     <p>
       Fields marked with an&nbsp;<span class="required">*</span>&nbsp;are required

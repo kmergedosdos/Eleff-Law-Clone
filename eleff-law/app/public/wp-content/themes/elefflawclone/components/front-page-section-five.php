@@ -1,5 +1,6 @@
 <div class="front-page-section-five__content">
   <h2 class="heading">Stress-Free Estate Plans For Your Peace Of <span> Mind</span></h2>
+  <div class="divider"></div>
   <div class="estate-planning-content">
     <div class="description-text">
       <p>

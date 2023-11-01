@@ -1,5 +1,6 @@
 <div class="front-page-section-three__content">
   <h2 class="heading">Estate Planning Is For Everyone At All Stages <span>Of Life</span></h2>
+  <div class="divider center mb-3"></div>
   <div class="stages-of-life">
     <div class="stage for-singles">
       <div class="image">

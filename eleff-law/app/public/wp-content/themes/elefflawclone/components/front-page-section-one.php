@@ -13,6 +13,7 @@
         We Are Safely Open For
         <span>Business!</span>
       </h2>
+      <div class="divider"></div>
       <p>
         Even during unprecedented times, attorney Susan Eleff remains committed to making you feel safe and comfortable when meeting with her and her staff. She is happy to consult with you virtually, as well as in her outdoor meeting space. She and all staff members are fully vaccinated, and follow the protocol of health officials. Susan and her staff observe social distancing and wear masks on request.
       </p>
