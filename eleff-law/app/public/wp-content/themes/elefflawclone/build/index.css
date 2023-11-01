@@ -10,6 +10,7 @@
 @import url("../components/front-page-section-six.css");
 @import url("../components/page-banner.css");
 @import url("../components/page-contact-form.css");
+@import url("../components/scroll-to-top-floating-button.css");
 @import url("../components/sidebar.css");
 @import url("../styles/animations.css");
 @import url("../styles/breadcrumb.css");
@@ -46,6 +47,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {

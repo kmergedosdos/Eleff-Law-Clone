@@ -11,7 +11,9 @@
 <body <?php body_class(); ?>>
   <?php
   $websiteLogoImgUrl = get_template_directory_uri() . '/images/brand.png';
-  $contactNumber = "800-765-2662"
+  $contactNumber = "800-765-2662";
+
+  include('components/scroll-to-top-floating-button.php');
   ?>
 
   <header>
