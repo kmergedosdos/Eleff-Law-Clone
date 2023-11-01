@@ -1,5 +1,6 @@
 .front-page-section-five__content {
   padding: 100px 5%;
+  overflow: hidden;
 }
 
 .front-page-section-five__content .heading {
