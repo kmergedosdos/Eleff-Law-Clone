@@ -26,7 +26,7 @@
       <textarea name="description" id="description" rows="6"></textarea>
     </div>
     <div class="actions">
-      <div>
+      <div class="links-container">
         <div class="links">
           <a href="/disclaimer/" id="showDisclaimer">Disclaimer</a>&nbsp;|&nbsp;<a href="/privacy/">Privacy Policy</a>
         </div>
