@@ -34,6 +34,16 @@
   .description-video
   .subheading-container {
   margin-top: 30px;
+  opacity: 0;
+}
+
+.front-page-section-six__content
+  .law-services-content
+  .description-video
+  .subheading-container.animate {
+  animation-name: fade-leftwards;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .front-page-section-six__content

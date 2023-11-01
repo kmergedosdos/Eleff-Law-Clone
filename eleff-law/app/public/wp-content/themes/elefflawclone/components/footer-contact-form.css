@@ -13,6 +13,13 @@
   text-align: center;
   font-style: italic;
   margin-bottom: 0.5em;
+  opacity: 0;
+}
+
+.footer-contact-form > .heading.animate {
+  animation-name: fade-leftwards;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .footer-contact-form > .heading > span {

@@ -9,6 +9,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 5%;
+  overflow: hidden;
+}
+
+.front-page-section-one .subheading-container {
+  opacity: 0;
+}
+.front-page-section-one .subheading-container.animate {
+  animation-name: fade-leftwards;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .front-page-section-one .content {

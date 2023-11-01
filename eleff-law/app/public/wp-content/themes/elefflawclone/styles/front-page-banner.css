@@ -27,6 +27,13 @@
 
 .front-page-banner__content__text {
   padding: 2em;
+  opacity: 0;
+}
+
+.front-page-banner__content__text {
+  animation-name: fade-upwards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .front-page-banner__content__text .heading {

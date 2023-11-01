@@ -175,3 +175,60 @@ window.onresize = () => {
     itemSubMenu.classList.add("hidden");
   });
 };
+
+// OBSERVER TO ADD ANIMATION
+function animateEntries(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // handle on entry visible on screen
+      entry.target.classList.add("animate");
+    } else {
+      // handle on entry not visible on screen
+    }
+  });
+}
+
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+let observer = new IntersectionObserver(animateEntries, options);
+
+const frontSectionOneSubheading = document.querySelector(
+  ".front-page-section-one .subheading-container"
+);
+if (frontSectionOneSubheading) observer.observe(frontSectionOneSubheading);
+
+const frontBannerTexts = document.querySelector(
+  ".front-page-banner__content__text"
+);
+if (frontBannerTexts) observer.observe(frontBannerTexts);
+
+const frontSection3Items = document.querySelectorAll(
+  ".front-page-section-three__content .stages-of-life .stage .image"
+);
+frontSection3Items.forEach((item) => {
+  observer.observe(item);
+});
+
+const frontSectionFiveHeading = document.querySelector(
+  ".front-page-section-five__content .heading"
+);
+if (frontSectionFiveHeading) observer.observe(frontSectionFiveHeading);
+
+const frontSectionSixSubheading = document.querySelector(
+  ".front-page-section-six__content .law-services-content .description-video .subheading-container"
+);
+if (frontSectionSixSubheading) observer.observe(frontSectionSixSubheading);
+
+const footerContactHeading = document.querySelector(
+  ".footer-contact-form > .heading"
+);
+if (footerContactHeading) observer.observe(footerContactHeading);
+
+const genericPageBannerTextSpan = document.querySelector(
+  ".page-banner__content__text span"
+);
+if (genericPageBannerTextSpan) observer.observe(genericPageBannerTextSpan);

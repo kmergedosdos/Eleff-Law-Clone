@@ -19,6 +19,14 @@
 
 .front-page-section-three__content .stages-of-life .stage .image {
   height: 250px;
+  opacity: 0;
+}
+
+.front-page-section-three__content .stages-of-life .stage .image.animate {
+  animation-name: fade-downwards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
 }
 
 .front-page-section-three__content .stages-of-life .stage .image > img {
