@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center;
   color: var(--color-white);
+  overflow: hidden;
 }
 
 .footer-contact-form > .heading {
