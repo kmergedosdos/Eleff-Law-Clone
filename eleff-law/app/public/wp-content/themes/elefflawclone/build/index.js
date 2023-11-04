@@ -266,3 +266,31 @@ const genericPageBannerTextSpan = document.querySelector(
   ".page-banner__content__text span"
 );
 if (genericPageBannerTextSpan) observer.observe(genericPageBannerTextSpan);
+
+// CHANGE FORM SUBMIT BUTTON TEXT WHEN CLICKED
+const footerContactForm = document.querySelector(".footer-contact-form form");
+if (footerContactForm) {
+  footerContactForm.addEventListener("submit", () => {
+    const submitBtn = document.getElementById("submitButton");
+    submitBtn.textContent = "PROCESSING";
+    submitBtn.style.backgroundColor = "rgba(0,0,0,0.5)";
+  });
+
+  const emailInput = document.getElementById("email");
+  const emailValidationIcon = document.getElementById("email-icon");
+
+  emailInput.addEventListener("input", function () {
+    const email = emailInput.value;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isEmailValid = emailRegex.test(email);
+
+    if (isEmailValid) {
+      emailValidationIcon.style.opacity = 1;
+      emailValidationIcon.style.transform = "scale(1)";
+    } else {
+      emailValidationIcon.style.opacity = 0;
+      emailValidationIcon.style.transform = "scale(0)";
+    }
+  });
+}

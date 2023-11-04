@@ -4,7 +4,7 @@
     <span>You Deserve</span>
   </h2>
   <div class="divider center bg-light"></div>
-  <form action="" class="form">
+  <form method="post" class="form" id="form">
     <p>
       Fields marked with an&nbsp;<span class="required">*</span>&nbsp;are required
     </p>
@@ -13,9 +13,10 @@
         <label for="name">Name</label>
         <input type="text" id="name" name="name">
       </div>
-      <div class="form-field">
+      <div class="form-field w-icon">
         <label for="email">Email Address<span class="required">*</span></label>
         <input type="email" id="email" name="email" required>
+        <i class="fa fa-check-circle" id="email-icon" aria-hidden="true"></i>
       </div>
       <div class="form-field">
         <label for="phone">Phone</label>
@@ -44,7 +45,58 @@
           </label>
         </div>
       </div>
-      <button type="submit" class="button button--submit">Schedule Your Free Consultation Today</button>
+      <button type="submit" name="submit" id="submitButton" class="button button--submit">Schedule Your Free Consultation Today</button>
     </div>
   </form>
+  <?php
+  if (isset($_GET['sent'])) {
+  ?>
+    <h5 style="text-align: center; font-style: italic; margin-top: 2em; color: white;">
+      <?php
+      if ($_GET['sent'] == 'true') {
+        echo 'Thank you for your inquiry! We will get in touch with you soon.';
+      } else {
+        echo 'The message was not sent! Please try again.';
+      }
+      ?>
+    </h5>
+  <?php
+  }
+  ?>
 </div>
+
+<?php
+
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $description = $_POST['description'];
+
+  $to = SMTP_FROM;
+  $subject = 'Eleff Law Clone Footer Form Submission';
+  $message = "Name: $name";
+  $message .= "\nEmail: $email";
+  $message .= "\nPhone: $phone";
+  $message .= "\nLegal Issue: $description";
+  $headers[] = 'Content-type: text/plain; charset=utf-8';
+
+  // send test message using wp_mail function.
+  $sent = wp_mail($to, $subject, $message, $headers);
+
+  //display message based on the result.
+  if ($sent) {
+?>
+    <script>
+      window.location.assign(`${window.location.origin}/${window.location.pathname}?sent=true`);
+    </script>
+  <?php
+  } else {
+  ?>
+    <script>
+      window.location.assign(`${window.location.origin}/${window.location.pathname}?sent=false`);
+    </script>
+<?php
+  }
+}
+?>

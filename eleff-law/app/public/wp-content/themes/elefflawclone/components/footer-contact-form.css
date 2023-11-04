@@ -39,6 +39,25 @@
 
 .footer-contact-form .form-field-group > .form-field {
   flex: 1;
+  position: relative;
+}
+
+.footer-contact-form .form-field-group > .form-field i {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 2rem;
+  color: green;
+
+  /* Adjust this value to control the icon's position */
+}
+
+.footer-contact-form .form-field-group > .form-field .fa.fa-check-circle {
+  opacity: 0;
+  transform: scale(0);
+  /* Initially small */
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .footer-contact-form .form-field {
@@ -125,9 +144,11 @@
     display: block;
     padding-bottom: 100px;
   }
+
   .footer-contact-form .actions .links-container {
     width: 100%;
   }
+
   .footer-contact-form .actions > .button--submit {
     margin-top: 2em;
     float: right;
@@ -145,6 +166,7 @@
   .footer-contact-form .actions {
     padding-bottom: 0;
   }
+
   .footer-contact-form .actions > .button--submit {
     float: none;
     width: 100%;

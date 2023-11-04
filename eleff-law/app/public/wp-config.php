@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The base configuration for WordPress
  *
@@ -21,22 +22,22 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'local' );
+define('DB_NAME', 'local');
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'root');
 
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define('DB_PASSWORD', 'root');
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', 'localhost');
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define('DB_CHARSET', 'utf8');
 
 /** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication unique keys and salts.
@@ -78,8 +79,8 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', false );
+if (!defined('WP_DEBUG')) {
+	define('WP_DEBUG', false);
 }
 
 
@@ -91,12 +92,22 @@ define('AUTH_SALT',        'Aq00Oh5n1Mc6T/4vUGp1+wJ6H/1picVRWyUwJqr7P5VTDI41l9y1
 define('SECURE_AUTH_SALT', 'uhj64zNVXb48mG49olrU+fQ2FNVnNIfD4uN3TMIwdXR++FynX+Z8va2Xo6Xr4LpvR0emuqSeSkCAYE4mK8+CtQ==');
 define('LOGGED_IN_SALT',   'pOdGHstROe0t7oceLb3YDc3BsRSt6yg/+Xizn0U/sYmuGCxiNH6OdBzja0KmVTmooWVYC+dqPoVFXsTsC/zh/Q==');
 define('NONCE_SALT',       'zBUdDZVZpNyBKmPG8OmBrQpJfAOdS8xPwlxMBhhhFXiTkpR4TS4v238WOXMg/Jz9tN0U2wcfWdOKHU68kE9PQw==');
-define( 'WP_ENVIRONMENT_TYPE', 'local' );
+define('WP_ENVIRONMENT_TYPE', 'local');
+
+define('SMTP_USERNAME', 'username@gmail.com'); //replace with your gmail
+define('SMTP_PASSWORD', 'whsi bcuc mbcr bapb'); //replace with your gmail password
+define('SMTP_SERVER', 'smtp.gmail.com');
+define('SMTP_FROM', 'username@gmail.com'); //replace with your gmail
+define('SMTP_NAME', 'Eleff Law Clone'); //replace with your name or website name
+define('SMTP_PORT', '587');
+define('SMTP_SECURE', 'tls');
+define('SMTP_AUTH', true);
+define('SMTP_DEBUG', 0);
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+if (!defined('ABSPATH')) {
+	define('ABSPATH', __DIR__ . '/');
 }
 
 /** Sets up WordPress vars and included files. */
